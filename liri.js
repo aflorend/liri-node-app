@@ -124,9 +124,8 @@ function movieInfo(doThisText) {
 	// Request package to request from OMDB API
 	request('http://www.omdbapi.com/?type=movie&plot=short&t=' + movieTitle, function(err, response, body) {
 		if (err) {
-		}
 			console.error(err);
-		else {
+		} else {
 			var movieData = JSON.parse(body)
 			
 			console.log('Movie title: ' + movieData.Title);
